@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diagnosis Prediction</title>
+</head>
+
+<body style="background-color:#3978D3 ;">
+<p style="color: #ffffff;">
+{%for item in results[0]%}
+    {%if item == "This diagnosis occurs in association with the following symptoms:"%}
+    <br>{{item}}
+    {%else%}
+    {{item}}<br>
+    {%endif%}
+{%endfor%}
+</p>
+<div>
+    <img src = '/plot.png' alt="graph">
+</div>
+</body>
+</html>
