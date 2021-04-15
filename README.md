@@ -1,1 +1,2 @@
-# DIsease_Predictor
+# Major-Project
+Eighth semester major project
