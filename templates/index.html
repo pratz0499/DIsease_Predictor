@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Disease Predictor</title>
+        <link rel= "stylesheet" href="{{url_for('static',filename='style.css')}}">
+    </head>
+    
+    <style>
+        body, html{
+    height:100%;
+    margin:0;
+    font-size:25px;
+    font-family:"Lato", sans-serif;
+    font-weight:500;
+    line-height:2.0em;
+    color: #fff;;
+
+}
+.pimg1,.pimg2, .pimg3{
+    position:relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
+
+
+.pimg1{
+    background-image: url('/static/Disease predictor.gif');
+    min-height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.pimg2{
+    background-image: url('/static/image2.png');
+    opacity: 0.7;
+    min-height: 700px;
+    min-width: 100%;
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+}
+
+.pimg3{
+    background-image: url('/static/image1.png');
+    opacity: 0.7;
+    min-height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+.section{
+    text-align: center;
+    padding: 50px 80px;
+}
+
+.section-light{
+    background-color:#3978D3;
+    color: rgb(255, 255, 255);
+}
+.section-dark{
+    background-color:#3978D3;
+    color: rgb(255, 255, 255);
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #5cc3f3;
+  color: rgb(0, 0, 0);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor:pointer;
+
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #ffffff;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+    </style> 
+
+    <body>
+
+       <div class= "pimg1"></div>
+
+       <section class="section section-light">
+           <h2>
+               About Disease Predictor
+           </h2>
+           <p>
+               Disease Predictor is a medical report analysis prototype developed with the approach to improve the prediction of disease based on actual reports. This enables the users to get 
+               actual insight into their symptoms and possible diagnoses based on medical reports. Provides medical proffesionals to understand the possible tests to run and understand the case in depth.
+               This can also be used as a helpful research tool to understand the taits of certain diseases based on the medical reports of specific zone. Disease Predictor uses an 
+               advanced predictive algorithm to process the data and predict the most probable disease that the user might encounter based on the symptoms entered. 
+           </p>
+       </section>
+
+       <div class= "pimg2"></div>
+
+    <section class="section section-dark">
+        <h2>
+            Check your results
+        </h2>
+        <body>
+        <form action="/diagnose" method="post">
+
+            <label  for="fname">First Name </label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name.." >
+        
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        
+            <label for="gender">Gender</label>
+            
+            <select id="gender" name="gender" >
+              <option value="" disabled selected hidden>Enter gender...</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Others">Others</option>
+            </select>
+        
+            <label for="symptoms">symptoms</label>
+            <textarea id="symptoms" name="symptoms" placeholder="Please enter your symptoms..." style="height:200px"></textarea>
+        
+            <input type="submit" value="Submit">
+        
+          </form>
+        </body>
+    </section>
+
+        <div class= "pimg3"></div>
+        
+    </body>
+   
+</html>
